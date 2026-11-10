@@ -1,0 +1,47 @@
+server:
+  port: 8089
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: school-system
+  datasource:
+    url: jdbc:mysql://localhost:3307/school_system?useSSL=false&serverTimezone=Asia/Bangkok&characterEncoding=UTF-8&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+    username: root
+    password: "12345678"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+  jackson:
+    time-zone: Asia/Bangkok
+    date-format: yyyy-MM-dd HH:mm:ss
+
+# JWT Configuration
+jwt:
+  secret: your-super-secret-jwt-key-must-be-at-least-256-bits-long-for-security
+  expiration: 86400000  # 24 hours in milliseconds
+  refresh-expiration: 604800000  # 7 days
+
+# File Upload
+spring.servlet.multipart:
+  max-file-size: 10MB
+  max-request-size: 10MB
+
+# CORS
+cors:
+  allowed-origins: http://localhost:3000
+  allowed-methods: GET,POST,PUT,DELETE,PATCH,OPTIONS
+  allowed-headers: "*"
+  allow-credentials: true
+
+logging:
+  level:
+    com.school: DEBUG
+    org.springframework.security: INFO

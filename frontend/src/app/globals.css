@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'THSarabunNew';
+  src: url('https://cdn.jsdelivr.net/gh/lazywasabi/thai-web-fonts@7/fonts/ThSarabunNew/ThSarabunNew.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THSarabunNew';
+  src: url('https://cdn.jsdelivr.net/gh/lazywasabi/thai-web-fonts@7/fonts/ThSarabunNew/ThSarabunNew-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THSarabunNew';
+  src: url('https://cdn.jsdelivr.net/gh/lazywasabi/thai-web-fonts@7/fonts/ThSarabunNew/ThSarabunNew-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THSarabunNew';
+  src: url('https://cdn.jsdelivr.net/gh/lazywasabi/thai-web-fonts@7/fonts/ThSarabunNew/ThSarabunNew-BoldItalic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+body {
+  font-family: 'THSarabunNew', 'TH Sarabun PSK', Tahoma, sans-serif;
+  font-size: 18px; /* ขยายขนาดพื้นฐานเล็กน้อยเพราะ Sarabun ตัวเล็ก */
+}
